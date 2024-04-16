@@ -25,23 +25,23 @@ const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout
 });
-
+ 
 rl.question('Enter the first number: ', (firstNumber) => {
   rl.question('Enter the second number: ', (secondNumber) => {
-    rl.question('Enter the operation (add, subtract, multiply, divide): ', (operation) => {
+    rl.question('Enter the operation (+, -, *, /): ', (operation) => {
       const calculator = new Calculator();
       let result;
       switch (operation) {
-        case 'add':
+        case '+':
           result = calculator.add(parseFloat(firstNumber), parseFloat(secondNumber));
           break;
-        case 'subtract':
+        case '-':
           result = calculator.subtract(parseFloat(firstNumber), parseFloat(secondNumber));
           break;
-        case 'multiply':
+        case '*':
           result = calculator.multiply(parseFloat(firstNumber), parseFloat(secondNumber));
           break;
-        case 'divide':
+        case '/':
           result = calculator.divide(parseFloat(firstNumber), parseFloat(secondNumber));
           break;
         default:
